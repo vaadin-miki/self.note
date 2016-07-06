@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans&subset=latin-ext';
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+.important {
+    color: #aa1111;
+}
+
+.remark {
+    color: #333;
+}
+
+.input {
+    background: #ebebeb;
+}
+
+#copyright {
+    font-size: small;
+    color: #666;
+}
+
+#copyright a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #666;
+}
+
+#copyright a:hover {
+    color: #333;
+}
+
+#copyright li {
+    display: inline;
+    list-style: none;
+    margin-left: 2em;
+    margin-right: 2em;
+}

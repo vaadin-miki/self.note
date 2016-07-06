@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
+  <title><%= @note.proper_title('Untitled note') %> :: self.note</title>
+</head>
+<body>
+<section id="new_note" class="note">
+
+  <p class="note_title"><%= @note.title %></p>
+  <p class="note_body"><%= @note.body %></p>
+  <p class="note_created_at"><%= @note.created_at %></p>
+
+</section>
+<section id="auth">
+
+</section>
+<footer id="copyright">
+  <ul>
+    <li>&#169; 2016 self.note</li>
+    <li><a href="/privacy.html">Privacy policy</a></li>
+    <li><a href="/terms.html">Terms and conditions</a></li>
+  </ul>
+</footer>
+</body>
+</html>

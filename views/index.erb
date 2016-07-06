@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="import" href="components/iron-form/iron-form.html"/>
+  <link rel="import" href="components/iron-collapse/iron-collapse.html"/>
+  <link rel="import" href="components/paper-input/paper-input.html"/>
+  <link rel="import" href="components/paper-input/paper-textarea.html"/>
+  <link rel="import" href="components/paper-toggle-button/paper-toggle-button.html"/>
+  <link rel="import" href="components/paper-button/paper-button.html"/>
+  <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
+  <title>self.note</title>
+</head>
+<body>
+<section id="new_note" class="note">
+  <form id="note" method="post">
+    <paper-textarea label="Just write anything..." name="note[body]"></paper-textarea>
+    <paper-input label="File the above under..." name="note[title]"></paper-input>
+    <paper-toggle-button id="toggle" onclick="document.getElementById('auth').toggle(); document.getElementById('private').value=!document.getElementById('toggle').checked;">Make this note private <span class="subtitle">(requires email and password for authentication)</span></paper-toggle-button>
+    <input type="hidden" name="private" id="private" value="false"/>
+    <iron-collapse id="auth">
+      <paper-input label="Your email" name="user[email]"></paper-input>
+      <paper-input label="And password" type="password" name="user[pass]"></paper-input>
+    </iron-collapse>
+  </form>
+  <paper-button onclick="document.getElementById('note').submit();">self.note</paper-button>
+
+</section>
+<section id="auth">
+
+</section>
+<footer id="copyright">
+  <ul>
+    <li>&#169; 2016 self.note</li>
+    <li><a href="/privacy.html">Privacy policy</a></li>
+    <li><a href="/terms.html">Terms and conditions</a></li>
+  </ul>
+</footer>
+</body>
+</html>
